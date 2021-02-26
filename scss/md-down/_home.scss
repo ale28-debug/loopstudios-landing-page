@@ -1,0 +1,50 @@
+#home{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../images/desktop/image-hero.jpg') fixed no-repeat center / cover;
+    height: 600px;
+
+    .container{
+        max-width: 100%;
+        position: relative;
+    }
+
+    #navbar{
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+
+      
+
+      .navbar{
+          display: flex;
+          align-items: center;
+          max-width: 970px;
+          margin: auto;
+  
+          ul{
+              display: none;
+          }
+
+      }
+
+  }
+
+  .box{
+      width: 45%;
+      border: 3px solid $primary-1;
+      padding: 0 20px;
+      margin: 60px 0 0 230px;
+      position: absolute;
+      top: 5em;
+
+      h2{
+          color: $primary-1;
+          @include fontSize(50px);
+          @include fontWeight(300);
+      }
+  }
+  
+
+  
+}

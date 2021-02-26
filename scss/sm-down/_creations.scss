@@ -1,0 +1,103 @@
+#creations{
+    margin: 450px 0 0 0;
+    padding: 0 0 0 80px;
+
+    .creations{
+        h2{
+            @include fontSize(30px);
+            float: left;
+        }
+
+        .btn{
+            
+            &:first-child{
+                display: none;
+            }
+            
+            &:last-child{
+                border: 2px solid $primary-2;
+                margin: 20px 50px 0 0;
+                padding: 5px 30px;
+                color: $primary-2;
+                text-decoration: none;
+                display: none; // PROVVISORIO!!!
+            }
+                
+                
+        }
+
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 0 0 0;
+
+            .first, .second, .third, .fourth, 
+            .fifth, .sixth, .seventh, .eighth{
+                position: relative;
+
+                .image{
+                    img{
+                        width: 200px;
+                        margin: 0 40px 40px 0;
+                        box-shadow: 0 0 10px #808080;
+                        border-radius: 5px;
+                        
+                    }
+                }
+
+                .caption{
+                    position: absolute;
+                    bottom: 40px;
+                    left: 35px;
+
+                    h2{
+                        @include fontSize(30px);
+                        color: $primary-1;
+                        @include fontWeight(300);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and(max-width: 375px){
+
+    #creations{
+        padding: 0 0 0 20px;
+        
+        .container{
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .creations{
+            .cards{
+                .first, .second, .third,
+                .fourth, .fifth, .sixth, .seventh, .eighth{
+                    .image{
+                        img{
+                            // Immagine verticale, nascosta per desktop
+                            &:first-child{
+                                display: none;
+                            }
+
+                            // Immagine orizzontale per mobile
+                            &:last-child{
+                                width: 300px;
+                                height: 180px;
+                                margin: 0 40px 40px 0;
+                                box-shadow: 0 0 10px #808080;
+                                border-radius: 5px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

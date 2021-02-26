@@ -1,0 +1,597 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+}
+
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  margin: auto;
+  max-width: 970px;
+}
+
+.color-scroll {
+  background: black;
+  transition: background 0.5s;
+}
+
+a, p {
+  font-family: "Alata", sans-serif;
+}
+
+a {
+  color: white;
+}
+
+p {
+  color: #8c8c8c;
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 375px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/desktop/image-hero.jpg") fixed no-repeat center/cover;
+    height: 600px;
+  }
+  #home .container {
+    max-width: 100%;
+  }
+  #home #navbar {
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  #home #navbar .container {
+    max-width: 970px;
+    margin: auto;
+  }
+  #home #navbar .navbar {
+    display: flex;
+    align-items: center;
+  }
+  #home #navbar .navbar ul {
+    display: none;
+  }
+  #home #navbar .navbar .hamburger-menu {
+    padding: 5px 0 10px 0;
+  }
+  #home .box {
+    width: 90%;
+    border: 3px solid white;
+    padding: 0 20px;
+    margin: 80px auto 0 auto;
+    position: absolute;
+    top: 5em;
+    left: 1em;
+  }
+  #home .box h2 {
+    color: white;
+    font-size: 45px;
+    font-weight: 300;
+  }
+  #interactive-vr {
+    margin: 200px 0 0 0;
+  }
+  #interactive-vr .interactive-vr .image img {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+  #interactive-vr .interactive-vr .caption {
+    text-align: center;
+  }
+  #interactive-vr .interactive-vr .caption h2 {
+    font-size: 30px;
+    margin: 50px 0 30px 0;
+  }
+  #interactive-vr .interactive-vr .caption p {
+    font-size: 16px;
+  }
+  #creations {
+    margin: 450px 0 0 0;
+    padding: 0 0 0 80px;
+  }
+  #creations .creations h2 {
+    font-size: 30px;
+    float: left;
+  }
+  #creations .creations .btn:first-child {
+    display: none;
+  }
+  #creations .creations .btn:last-child {
+    border: 2px solid black;
+    margin: 20px 50px 0 0;
+    padding: 5px 30px;
+    color: black;
+    text-decoration: none;
+    display: none;
+  }
+  #creations .creations .cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 0 0;
+  }
+  #creations .creations .cards .first, #creations .creations .cards .second, #creations .creations .cards .third, #creations .creations .cards .fourth,
+  #creations .creations .cards .fifth, #creations .creations .cards .sixth, #creations .creations .cards .seventh, #creations .creations .cards .eighth {
+    position: relative;
+  }
+  #creations .creations .cards .first .image img, #creations .creations .cards .second .image img, #creations .creations .cards .third .image img, #creations .creations .cards .fourth .image img,
+  #creations .creations .cards .fifth .image img, #creations .creations .cards .sixth .image img, #creations .creations .cards .seventh .image img, #creations .creations .cards .eighth .image img {
+    width: 200px;
+    margin: 0 40px 40px 0;
+    box-shadow: 0 0 10px #808080;
+    border-radius: 5px;
+  }
+  #creations .creations .cards .first .caption, #creations .creations .cards .second .caption, #creations .creations .cards .third .caption, #creations .creations .cards .fourth .caption,
+  #creations .creations .cards .fifth .caption, #creations .creations .cards .sixth .caption, #creations .creations .cards .seventh .caption, #creations .creations .cards .eighth .caption {
+    position: absolute;
+    bottom: 40px;
+    left: 35px;
+  }
+  #creations .creations .cards .first .caption h2, #creations .creations .cards .second .caption h2, #creations .creations .cards .third .caption h2, #creations .creations .cards .fourth .caption h2,
+  #creations .creations .cards .fifth .caption h2, #creations .creations .cards .sixth .caption h2, #creations .creations .cards .seventh .caption h2, #creations .creations .cards .eighth .caption h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-width: 375px) {
+  #creations {
+    padding: 0 0 0 20px;
+  }
+  #creations .container {
+    margin: 0;
+    max-width: 100%;
+  }
+  #creations .creations .cards .first .image img:first-child, #creations .creations .cards .second .image img:first-child, #creations .creations .cards .third .image img:first-child,
+  #creations .creations .cards .fourth .image img:first-child, #creations .creations .cards .fifth .image img:first-child, #creations .creations .cards .sixth .image img:first-child, #creations .creations .cards .seventh .image img:first-child, #creations .creations .cards .eighth .image img:first-child {
+    display: none;
+  }
+  #creations .creations .cards .first .image img:last-child, #creations .creations .cards .second .image img:last-child, #creations .creations .cards .third .image img:last-child,
+  #creations .creations .cards .fourth .image img:last-child, #creations .creations .cards .fifth .image img:last-child, #creations .creations .cards .sixth .image img:last-child, #creations .creations .cards .seventh .image img:last-child, #creations .creations .cards .eighth .image img:last-child {
+    width: 300px;
+    height: 180px;
+    margin: 0 40px 40px 0;
+    box-shadow: 0 0 10px #808080;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    background: black;
+    margin: 230px 0 0 0;
+  }
+  footer .footer {
+    padding: 20px;
+    max-width: 970px;
+    margin: auto;
+  }
+  footer .footer .link ul {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer .footer-container:first-child {
+    text-align: center;
+  }
+  footer .footer .footer-container:first-child .logo-container img {
+    width: 25%;
+  }
+  footer .footer .footer-container:first-child ul li {
+    margin: 8px 0;
+  }
+  footer .footer .footer-container:first-child ul li a {
+    margin: 0 8px;
+    font-size: 16px;
+  }
+  footer .footer .footer-container:last-child {
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer .footer-container:last-child .social img {
+    margin: 20px 3px;
+  }
+  footer .footer .footer-container:last-child p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/desktop/image-hero.jpg") fixed no-repeat center/cover;
+    height: 600px;
+  }
+  #home .container {
+    max-width: 100%;
+    position: relative;
+  }
+  #home #navbar {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  #home #navbar .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 970px;
+    margin: auto;
+  }
+  #home #navbar .navbar ul {
+    display: none;
+  }
+  #home .box {
+    width: 45%;
+    border: 3px solid white;
+    padding: 0 20px;
+    margin: 60px 0 0 230px;
+    position: absolute;
+    top: 5em;
+  }
+  #home .box h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #interactive-vr {
+    margin: 200px 0 0 0;
+  }
+  #interactive-vr .interactive-vr .image img {
+    width: 40%;
+    margin: auto;
+    display: block;
+  }
+  #interactive-vr .interactive-vr .caption {
+    text-align: center;
+  }
+  #interactive-vr .interactive-vr .caption h2 {
+    font-size: 30px;
+    margin: 50px 0 30px 0;
+  }
+  #interactive-vr .interactive-vr .caption p {
+    font-size: 20px;
+  }
+  #creations {
+    margin: 450px 0 0 0;
+    padding: 0 0 0 80px;
+  }
+  #creations .creations h2 {
+    font-size: 30px;
+    float: left;
+  }
+  #creations .creations .btn {
+    float: right;
+    border: 2px solid black;
+    margin: 20px 50px 0 0;
+    padding: 5px 30px;
+    color: black;
+    text-decoration: none;
+  }
+  #creations .creations .btn:last-child {
+    display: none;
+  }
+  #creations .creations .btn:hover {
+    color: white;
+    background: black;
+    transition: all 0.4s;
+  }
+  #creations .creations .cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 0 0;
+  }
+  #creations .creations .cards .first, #creations .creations .cards .second, #creations .creations .cards .third, #creations .creations .cards .fourth,
+  #creations .creations .cards .fifth, #creations .creations .cards .sixth, #creations .creations .cards .seventh, #creations .creations .cards .eighth {
+    position: relative;
+  }
+  #creations .creations .cards .first .image img, #creations .creations .cards .second .image img, #creations .creations .cards .third .image img, #creations .creations .cards .fourth .image img,
+  #creations .creations .cards .fifth .image img, #creations .creations .cards .sixth .image img, #creations .creations .cards .seventh .image img, #creations .creations .cards .eighth .image img {
+    width: 200px;
+    margin: 0 40px 40px 0;
+    box-shadow: 0 0 10px #808080;
+    border-radius: 5px;
+  }
+  #creations .creations .cards .first .caption, #creations .creations .cards .second .caption, #creations .creations .cards .third .caption, #creations .creations .cards .fourth .caption,
+  #creations .creations .cards .fifth .caption, #creations .creations .cards .sixth .caption, #creations .creations .cards .seventh .caption, #creations .creations .cards .eighth .caption {
+    position: absolute;
+    bottom: 40px;
+    left: 35px;
+  }
+  #creations .creations .cards .first .caption h2, #creations .creations .cards .second .caption h2, #creations .creations .cards .third .caption h2, #creations .creations .cards .fourth .caption h2,
+  #creations .creations .cards .fifth .caption h2, #creations .creations .cards .sixth .caption h2, #creations .creations .cards .seventh .caption h2, #creations .creations .cards .eighth .caption h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+  }
+  #creations .creations .cards .first:hover, #creations .creations .cards .third:hover,
+  #creations .creations .cards .fifth:hover, #creations .creations .cards .seventh:hover {
+    transform: rotate(4deg);
+    transition: transform 0.9s;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+  }
+  #creations .creations .cards .first .caption:hover h2, #creations .creations .cards .third .caption:hover h2,
+  #creations .creations .cards .fifth .caption:hover h2, #creations .creations .cards .seventh .caption:hover h2 {
+    color: black;
+  }
+  #creations .creations .cards .second:hover, #creations .creations .cards .fourth:hover,
+  #creations .creations .cards .sixth:hover, #creations .creations .cards .eighth:hover {
+    transform: rotate(-4deg);
+    transition: transform 0.9s;
+  }
+  #creations .creations .cards .second .caption:hover h2, #creations .creations .cards .fourth .caption:hover h2,
+  #creations .creations .cards .sixth .caption:hover h2, #creations .creations .cards .eighth .caption:hover h2 {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 375px) and (max-width: 1440px) {
+  #creations .creations .cards .first .image img:last-child, #creations .creations .cards .second .image img:last-child, #creations .creations .cards .third .image img:last-child,
+  #creations .creations .cards .fourth .image img:last-child, #creations .creations .cards .fifth .image img:last-child, #creations .creations .cards .sixth .image img:last-child, #creations .creations .cards .seventh .image img:last-child, #creations .creations .cards .eighth .image img:last-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  footer {
+    background: black;
+    margin: 230px 0 0 0;
+  }
+  footer .footer {
+    padding: 20px;
+    max-width: 970px;
+    margin: auto;
+  }
+  footer .footer .link ul {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer .footer-container:first-child {
+    text-align: center;
+  }
+  footer .footer .footer-container:first-child .logo-container img {
+    width: 25%;
+  }
+  footer .footer .footer-container:first-child ul li {
+    margin: 8px 0;
+  }
+  footer .footer .footer-container:first-child ul li a {
+    margin: 0 8px;
+    font-size: 20px;
+  }
+  footer .footer .footer-container:last-child {
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer .footer-container:last-child .social img {
+    margin: 20px 3px;
+  }
+  footer .footer .footer-container:last-child p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/desktop/image-hero.jpg") fixed no-repeat center/cover;
+    height: 600px;
+  }
+  #home .container {
+    max-width: 100%;
+    position: relative;
+  }
+  #home #navbar {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  #home #navbar .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 970px;
+    margin: auto;
+  }
+  #home #navbar .navbar ul {
+    margin: 0 100px 0 auto;
+  }
+  #home #navbar .navbar ul li:hover {
+    border-bottom: 2px solid white;
+    padding: 0 0 3px 0;
+    transition: border-bottom 0.2s;
+  }
+  #home #navbar .navbar ul li a {
+    margin: 0 8px;
+  }
+  #home #navbar .navbar .hamburger-menu {
+    display: none;
+  }
+  #home .box {
+    width: 30%;
+    border: 3px solid white;
+    padding: 0 20px;
+    position: absolute;
+    top: 10em;
+    left: 20em;
+  }
+  #home .box h2 {
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #interactive-vr .interactive-vr {
+    position: relative;
+  }
+  #interactive-vr .interactive-vr .image img {
+    width: 30%;
+    margin: 10% 0 0 20%;
+  }
+  #interactive-vr .interactive-vr .caption {
+    position: absolute;
+    width: 35%;
+    padding: 35px;
+    right: 20em;
+    bottom: -8em;
+    background: white;
+  }
+  #interactive-vr .interactive-vr .caption h2 {
+    font-size: 30px;
+  }
+  #creations {
+    margin: 450px 0 0 0;
+    padding: 0 0 0 80px;
+  }
+  #creations .creations h2 {
+    font-size: 30px;
+    float: left;
+  }
+  #creations .creations .btn {
+    float: right;
+    border: 2px solid black;
+    margin: 20px 50px 0 0;
+    padding: 5px 30px;
+    color: black;
+    text-decoration: none;
+  }
+  #creations .creations .btn:last-child {
+    display: none;
+  }
+  #creations .creations .btn:hover {
+    color: white;
+    background: black;
+    transition: all 0.4s;
+  }
+  #creations .creations .cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 0 0;
+  }
+  #creations .creations .cards .first, #creations .creations .cards .second, #creations .creations .cards .third, #creations .creations .cards .fourth,
+  #creations .creations .cards .fifth, #creations .creations .cards .sixth, #creations .creations .cards .seventh, #creations .creations .cards .eighth {
+    position: relative;
+  }
+  #creations .creations .cards .first .image img, #creations .creations .cards .second .image img, #creations .creations .cards .third .image img, #creations .creations .cards .fourth .image img,
+  #creations .creations .cards .fifth .image img, #creations .creations .cards .sixth .image img, #creations .creations .cards .seventh .image img, #creations .creations .cards .eighth .image img {
+    width: 200px;
+    margin: 0 40px 40px 0;
+    box-shadow: 0 0 10px #808080;
+    border-radius: 5px;
+  }
+  #creations .creations .cards .first .caption, #creations .creations .cards .second .caption, #creations .creations .cards .third .caption, #creations .creations .cards .fourth .caption,
+  #creations .creations .cards .fifth .caption, #creations .creations .cards .sixth .caption, #creations .creations .cards .seventh .caption, #creations .creations .cards .eighth .caption {
+    position: absolute;
+    bottom: 40px;
+    left: 35px;
+  }
+  #creations .creations .cards .first .caption h2, #creations .creations .cards .second .caption h2, #creations .creations .cards .third .caption h2, #creations .creations .cards .fourth .caption h2,
+  #creations .creations .cards .fifth .caption h2, #creations .creations .cards .sixth .caption h2, #creations .creations .cards .seventh .caption h2, #creations .creations .cards .eighth .caption h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+  }
+  #creations .creations .cards .first:hover, #creations .creations .cards .third:hover,
+  #creations .creations .cards .fifth:hover, #creations .creations .cards .seventh:hover {
+    transform: rotate(4deg);
+    transition: transform 0.9s;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+  }
+  #creations .creations .cards .first .caption:hover h2, #creations .creations .cards .third .caption:hover h2,
+  #creations .creations .cards .fifth .caption:hover h2, #creations .creations .cards .seventh .caption:hover h2 {
+    color: black;
+  }
+  #creations .creations .cards .second:hover, #creations .creations .cards .fourth:hover,
+  #creations .creations .cards .sixth:hover, #creations .creations .cards .eighth:hover {
+    transform: rotate(-4deg);
+    transition: transform 0.9s;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+  }
+  #creations .creations .cards .second .caption:hover h2, #creations .creations .cards .fourth .caption:hover h2,
+  #creations .creations .cards .sixth .caption:hover h2, #creations .creations .cards .eighth .caption:hover h2 {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-width: 1440px) {
+  #creations .creations .cards .first .image img:last-child, #creations .creations .cards .second .image img:last-child, #creations .creations .cards .third .image img:last-child,
+  #creations .creations .cards .fourth .image img:last-child, #creations .creations .cards .fifth .image img:last-child, #creations .creations .cards .sixth .image img:last-child, #creations .creations .cards .seventh .image img:last-child, #creations .creations .cards .eighth .image img:last-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    background: black;
+    margin: 230px 0 0 0;
+  }
+  footer .footer {
+    padding: 20px;
+    display: flex;
+    max-width: 970px;
+    margin: auto;
+  }
+  footer .footer .link ul {
+    padding: 0 0 0 0;
+  }
+  footer .footer .link ul li:hover {
+    border-bottom: 2px solid white;
+    padding: 0 0 3px 0;
+    transition: border-bottom 0.2s;
+  }
+  footer .footer .footer-container:first-child ul li a {
+    margin: 0 8px;
+  }
+  footer .footer .footer-container:last-child {
+    padding: 8px 0 0 0;
+    margin: 0 0 0 auto;
+  }
+  footer .footer .footer-container:last-child .social img {
+    margin: 0 3px;
+  }
+  footer .footer .footer-container:last-child .social img:hover {
+    border-bottom: 2px solid white;
+    padding: 0 0 4px 0;
+    transition: border-bottom 0.2s;
+  }
+}
+/*# sourceMappingURL=main.css.map */

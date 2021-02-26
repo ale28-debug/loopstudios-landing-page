@@ -1,0 +1,67 @@
+#home{
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../images/desktop/image-hero.jpg') fixed no-repeat center / cover;
+      height: 600px;
+
+      .container{
+          max-width: 100%;
+          position: relative;
+      }
+
+      #navbar{
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            max-width: 970px;
+            margin: auto;
+    
+            ul{
+                margin: 0 100px 0 auto;
+    
+                li{
+                    // active state al possaggio del mouse(hover)
+                    &:hover{
+                        border-bottom: 2px solid $primary-1;
+                        padding: 0 0 3px 0;
+                        transition: border-bottom 0.2s;
+                    }
+                    
+                    a{
+                        margin: 0 8px;
+                    }
+                }
+            }
+
+            .hamburger-menu{
+                display: none;
+            }
+
+            
+
+        }
+
+    }
+
+    .box{
+        width: 30%;
+        border: 3px solid $primary-1;
+        padding: 0 20px;
+        position: absolute;
+        top: 10em;
+        left: 20em;
+
+        h2{
+            color: $primary-1;
+            @include fontSize(50px);
+            @include fontWeight(300);
+        }
+    }
+    
+
+    
+}

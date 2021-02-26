@@ -1,0 +1,25 @@
+#interactive-vr{
+ .interactive-vr{
+     position: relative;
+     .image{
+          img{
+              width: 30%;
+              margin: 10% 0 0 20%;
+              }
+            }
+
+      .caption{
+                position: absolute;
+                width: 35%;
+                padding: 35px;
+                right: 20em;
+                bottom: -8em;
+                background: $primary-1;
+
+                h2{
+                    @include fontSize(30px);
+                }
+            }
+ }
+
+}

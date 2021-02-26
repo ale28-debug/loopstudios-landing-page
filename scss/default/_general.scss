@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+}
+
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container{
+    margin: auto;
+    max-width: 970px;
+}
+
+.color-scroll{
+    background: $primary-2;
+    transition: background 0.5s;
+}
+
+
+a, p{
+    font-family: $font-1;
+}
+
+a{
+    color: $primary-1;
+}
+
+p{
+    color: $primary-3;
+}
+
+h2{
+    font-family: $font-2;
+}
+
+ul{
+    li{
+        list-style: none;
+        display: inline-block;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+footer{
+    background: $primary-2;
+    margin: 230px 0 0 0;
+
+    .footer{
+        padding: 20px;
+        display: flex;
+        max-width: 970px;
+        margin: auto;
+
+        .link{
+            ul{
+                padding: 0 0 0 0;
+
+                li{
+                    // active state al possaggio del mouse(hover)
+                    &:hover{
+                        border-bottom: 2px solid $primary-1;
+                        padding: 0 0 3px 0;
+                        transition: border-bottom 0.2s;
+                    }
+                }
+            }
+        }
+
+        .footer-container{
+            &:first-child{
+                ul{
+                    li{
+                        a{
+                            margin: 0 8px;
+                        }
+                    }
+                }
+            }
+
+            &:last-child{
+                padding: 8px 0 0 0;
+                margin: 0 0 0 auto;
+
+                .social{
+                    img{
+                        margin: 0 3px;
+
+                        // active state al possaggio del mouse(hover)
+                    &:hover{
+                        border-bottom: 2px solid $primary-1;
+                        padding: 0 0 4px 0;
+                        transition: border-bottom 0.2s;
+                    }
+                    }
+                }
+            }
+        }
+    }
+}

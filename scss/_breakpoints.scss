@@ -1,0 +1,16 @@
+@import 'default/base';
+
+
+
+@media screen and (max-width: 375px){
+    @import 'sm-down/base';
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px){
+    @import 'md-down/base';
+}
+
+
+@media screen and (min-width: 1440px){
+    @import 'md-up/base';
+}
